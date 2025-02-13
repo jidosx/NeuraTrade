@@ -1,6 +1,7 @@
 # NeuroTrade
 ================
 
+[![Logo](https://github.com/yourusername/NeuroTrade/blob/main/logo.png?raw=true)](https://github.com/yourusername/NeuroTrade)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/yourusername/NeuroTrade/blob/main/LICENSE)
 [![Python Version](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](https://github.com/yourusername/NeuroTrade/issues)
@@ -29,61 +30,3 @@ Ensure you have the following installed:
 * Python 3.8+
 * pip
 * Git
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/NeuroTrade.git
-cd NeuroTrade
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-### Configure API Keys
-
-Set up your market data and trading API keys in `.env`.
-
-### Train the Model
-
-Run `train.py` to train or update the AI model.
-
-### Start Trading
-
-Execute `trade.py` to begin live or simulated trading.
-
-```bash
-python trade.py --mode=live # Live trading mode
-python trade.py --mode=sim # Simulation mode
-```
-
-## Contributing
-
-We welcome contributions! Please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/yourusername/NeuroTrade/blob/main/LICENSE) file for details.
-
-## Disclaimer
-
-This software is for educational purposes only. Trading involves risk, and past performance does not guarantee future results.
-
-## Getting Started
-
-1. Clone the repository and install dependencies.
-2. Configure API keys in `.env`.
-3. Train the model using `train.py`.
-4. Start trading using `trade.py`.
-
-## Roadmap
-
-* Improve predictive modeling accuracy
-* Integrate additional AI techniques
-* Enhance risk management features
-* Expand backtesting framework
