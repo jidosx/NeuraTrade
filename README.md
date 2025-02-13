@@ -1,4 +1,5 @@
 # NeuroTrade
+![NeuroTrade Logo](logo.png)
 
 Welcome to NeuroTrade, an AI-powered trading assistant designed to optimize financial market strategies using machine learning and neural networks.
 
