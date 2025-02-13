@@ -87,22 +87,3 @@ This software is for educational purposes only. Trading involves risk, and past 
 * Integrate additional AI techniques
 * Enhance risk management features
 * Expand backtesting framework
-
-## Acknowledgments
-
-* [Your Name](https://github.com/yourusername) - Creator and maintainer of NeuroTrade
-
-## Contact
-
-For any questions or concerns, please open an issue or contact [Your Name](https://github.com/yourusername).
-
-**Logo Design:**
-The NeuroTrade logo is a stylized combination of a brain and a chart, representing the fusion of artificial intelligence and financial markets. The logo is designed to be simple, yet distinctive and memorable.
-
-**Logo Variations:**
-
-* Primary logo: [logo.png](https://github.com/yourusername/NeuroTrade/blob/main/logo.png?raw=true)
-* Icon-only logo: [icon.png](https://github.com/yourusername/NeuroTrade/blob/main/icon.png?raw=true)
-* Text-only logo: [text-logo.png](https://github.com/yourusername/NeuroTrade/blob/main/text-logo.png?raw=true)
-
-Note: Replace the logo files with your own logo designs.
