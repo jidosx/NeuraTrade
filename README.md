@@ -1,7 +1,6 @@
 # NeuroTrade
 ================
 
-[![Logo](https://github.com/yourusername/NeuroTrade/blob/main/logo.png?raw=true)](https://github.com/yourusername/NeuroTrade)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/yourusername/NeuroTrade/blob/main/LICENSE)
 [![Python Version](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](https://github.com/yourusername/NeuroTrade/issues)
