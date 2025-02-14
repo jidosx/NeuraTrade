@@ -23,7 +23,11 @@ The NeuroTrade framework uses a plugin system to enable developers to extend its
 1. **Define Triggers**: Specify when the AI agent should act.
 2. **Define Actions**: Specify what actions the AI agent should take.
 3. **Integrate with External Systems**: Integrate with external systems, such as databases or APIs.
+**---**
+Status
 
+🚧 In Development
+**---**
 ## Python Implementation
 ```python
 import pandas as pd
