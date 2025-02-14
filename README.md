@@ -25,7 +25,7 @@ The NeuroTrade framework uses a plugin system to enable developers to extend its
 3. **Integrate with External Systems**: Integrate with external systems, such as databases or APIs.
 
 
-Status
+**Status**
 
 🚧 In Development
 
