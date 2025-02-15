@@ -1,0 +1,25 @@
+name: NeuraTrade Docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Build and deploy docs
+        run: |
+          # TO DO: Add build and deployment steps for NeuraTrade documentation
+          # (e.g. use Sphinx, Read the Docs, or GitHub Pages)
