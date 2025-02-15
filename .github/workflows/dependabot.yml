@@ -1,0 +1,10 @@
+version: 2
+update-configuration:
+  - package-manager: "pip"
+    directory: "/"
+    schedule:
+      - cron: "0 8 * * *"
+    reviewers:
+      - UraniumCorporation
+    assignees:
+      - UraniumCorporation
