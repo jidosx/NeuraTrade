@@ -1,0 +1,25 @@
+name: NeuraTrade Issue Form
+description: Please provide detailed information about the issue you're facing
+sections:
+  - name: Issue Type
+    description: Select the type of issue
+    type: select
+    options:
+      - Bug
+      - Feature Request
+      - Trading Strategy Inquiry
+      - Documentation Request
+      - Other (please specify)
+  - name: Problem Description
+    description: Describe the issue you're facing
+    type: textarea
+    attributes:
+      required: true
+  - name: Environment Details
+    description: Provide environment details
+    type: textarea
+    attributes:
+      required: true
+  - name: Additional Context
+    description: Add any additional context or information
+    type: textarea
