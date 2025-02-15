@@ -1,0 +1,17 @@
+name: Feature Request
+description: Request a new feature for NeuraTrade
+labels: [enhancement, feature-request]
+body:
+  - type: markdown
+    value: |
+      **Feature Request**
+      ===============
+      **Description**
+      *Please describe the feature you'd like to request, including:*
+      * Use case and benefits
+      * Any relevant context or background information
+  - type: textarea
+    id: description
+    label: Description
+    attributes:
+      required: true
