@@ -1,24 +1,24 @@
-# NeuroTrade
+# **NeuraTrade**
 ____________
-![NueroTrade LG7 logo](https://github.com/jidosx/NeuroTrade/blob/main/NeuraTradeLG7.jpeg)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/yourusername/NeuroTrade/blob/main/LICENSE)
+![NeuraTrade LG7 logo](https://github.com/jidosx/NeuraTrade/blob/main/NeuraTradeLG7.jpeg)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/yourusername/NeuraTrade/blob/main/LICENSE)
 [![Python Version](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](https://github.com/yourusername/NeuroTrade/issues)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](https://github.com/yourusername/NeuraTrade/issues)
 ____________
-# NeuroTrade Framework
+# **NeuraTrade Framework**
 
 ## Overview
-NeuroTrade is a composable, plugin-based AI agent framework designed for trading applications. It abstracts the trading process into three major steps: data ingestion, decision-making, and action execution. The framework is built around a modular, plugin-based system, enabling developers to define triggers and actions as standalone plugins.
+NeuraTrade is a composable, plugin-based AI agent framework designed for trading applications. It abstracts the trading process into three major steps: data ingestion, decision-making, and action execution. The framework is built around a modular, plugin-based system, enabling developers to define triggers and actions as standalone plugins.
 
 ## Architecture
-The NeuroTrade framework consists of the following components:
+The NeuraTrade framework consists of the following components:
 
 1. **Data Ingestion**: Responsible for collecting and processing market data.
 2. **Decision-Making**: Uses machine learning models to determine the best course of action based on the ingested data.
 3. **Action Execution**: Executes the selected action, such as buying or selling a stock.
 
 ## Plugin System
-The NeuroTrade framework uses a plugin system to enable developers to extend its functionality. Plugins can be used to:
+The NeuraTrade framework uses a plugin system to enable developers to extend its functionality. Plugins can be used to:
 
 1. **Define Triggers**: Specify when the AI agent should act.
 2. **Define Actions**: Specify what actions the AI agent should take.
@@ -36,7 +36,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
-class NeuroTrade:
+class NeuraTrade:
     def __init__(self):
         self.data_ingestion = None
         self.decision_making = None
@@ -81,16 +81,16 @@ class ActionExecution:
         else:
             print('Sell stock')
 
-# Create a NeuroTrade instance
-neuro_trade = NeuroTrade()
+# Create a NeuraTrade instance
+neura_trade = NeuraTrade()
 
 # Set the data ingestion, decision-making, and action execution plugins
-neuro_trade.set_data_ingestion(DataIngestion())
-neuro_trade.set_decision_making(DecisionMaking())
-neuro_trade.set_action_execution(ActionExecution())
+neura_trade.set_data_ingestion(DataIngestion())
+neura_trade.set_decision_making(DecisionMaking())
+neura_trade.set_action_execution(ActionExecution())
 
-# Run the NeuroTrade instance
-neuro_trade.run()
+# Run the NeuraTrade instance
+neura_trade.run()
 ```
 
 ## Plugin Interface
@@ -115,10 +115,10 @@ class Plugin:
 ```
 
 ## Extensibility
-The NeuroTrade framework is designed to be extensible, allowing developers to add new plugins and functionality as needed. The framework uses a modular, plugin-based system, enabling developers to define triggers and actions as standalone plugins.
+The NeuraTrade framework is designed to be extensible, allowing developers to add new plugins and functionality as needed. The framework uses a modular, plugin-based system, enabling developers to define triggers and actions as standalone plugins.
 
 ## Advantages
-The NeuroTrade framework has several advantages, including:
+The NeuraTrade framework has several advantages, including:
 
 1. **Modularity**: The framework is modular, allowing developers to add new plugins and functionality as needed.
 2. **Extensibility**: The framework is extensible, enabling developers to add new plugins and functionality as needed.
@@ -126,7 +126,7 @@ The NeuroTrade framework has several advantages, including:
 4. **Scalability**: The framework is scalable, allowing developers to add new plugins and functionality as needed.
 
 ## Conclusion
-The NeuroTrade framework is a composable, plugin-based AI agent framework designed for trading applications. It abstracts the trading process into three major steps: data ingestion, decision-making, and action execution. The framework is built around a modular, plugin-based system, enabling developers to define triggers and actions as standalone plugins. The framework is extensible, flexible, and scalable, making it an ideal solution for trading applications.
+The NeuraTrade framework is a composable, plugin-based AI agent framework designed for trading applications. It abstracts the trading process into three major steps: data ingestion, decision-making, and action execution. The framework is built around a modular, plugin-based system, enabling developers to define triggers and actions as standalone plugins. The framework is extensible, flexible, and scalable, making it an ideal solution for trading applications.
 
 
 Framework:
@@ -277,6 +277,3 @@ This framework provides:
 6. Easy configuration management
 
 You can extend it by adding new plugins for different strategies, data sources, or analysis methods. The system is designed to be both powerful and maintainable while keeping the core architecture simple and flexible.
-
-__________________
-
