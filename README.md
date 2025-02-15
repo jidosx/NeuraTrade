@@ -3,7 +3,6 @@ ____________
 ![NeuraTrade LG7 logo](https://github.com/jidosx/NeuraTrade/blob/main/NeuraTradeLG7.jpeg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/yourusername/NeuraTrade/blob/main/LICENSE)
 [![Python Version](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](https://github.com/yourusername/NeuraTrade/issues)
 ____________
 # **NeuraTrade Framework**
 
