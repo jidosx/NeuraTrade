@@ -1,0 +1,24 @@
+# @neuratrade/plugin-alpaca
+import alpaca_trade_api as tradeapi
+
+class AlpacaPlugin:
+    def __init__(self):
+        self.api = None
+
+    def connect_to_alpaca(self, api_key, api_secret, base_url):
+        # Connect to Alpaca API
+        self.api = tradeapi.REST(api_key, api_secret, base_url)
+
+    def buy_stock(self, symbol, quantity):
+        # Buy stock using Alpaca API with error handling
+        try:
+            self.api.submit_order(symbol, quantity, 'buy', 'market', 'day')
+        except Exception as e:
+            print(f"Error buying stock: {e}")
+
+    def sell_stock(self, symbol, quantity):
+        # Sell stock using Alpaca API with error handling
+        try:
+            self.api.submit_order(symbol, quantity, 'sell', 'market', 'day')
+        except Exception as e:
+            print(f"Error selling stock: {e}")
