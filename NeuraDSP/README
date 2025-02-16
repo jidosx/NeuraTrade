@@ -15,15 +15,3 @@ A plugin for the iNeuraTrade framework that integrates DeepSeek technology for e
 * Keras 2.4+
 * scikit-learn 0.24+
 * iNeuraTrade framework
-
-## Installation
-
-1. Clone this repository: `git clone https://github.com/your-username/neuradsp-plugin.git`
-2. Install required dependencies: `pip install -r requirements.txt`
-3. Configure the plugin: `python setup.py`
-
-## Usage
-
-1. Import the plugin in your iNeuraTrade application: `from neuradsp_plugin import NeuraDSPPlugin`
-2. Initialize the plugin: `neura_dsp_plugin = NeuraDSPPlugin(model_path='path/to/model', deepseek_api_key='your_api_key')`
-3. Use the plugin in your trading strategy: `neura_dsp_plugin.process(trading_context)`
