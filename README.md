@@ -11,7 +11,7 @@ ____________
 **Overview**
 ------------
 
-iNeuraTrade is a composable, plugin-based AI agent framework designed for trading applications. It abstracts the trading process into three major steps: data ingestion, decision-making (enhanced with NeuraDSP), and action execution. The framework is built around a modular, plugin-based system, enabling developers to define triggers and actions as standalone plugins.
+NeuraTrade is a composable, plugin-based AI agent framework designed for trading applications. It abstracts the trading process into three major steps: data ingestion, decision-making (enhanced with NeuraDSP), and action execution. The framework is built around a modular, plugin-based system, enabling developers to define triggers and actions as standalone plugins.
 
 **Architecture**
 --------------
@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
 ```python
 from flask import Flask, render_template
-from iNeuraTrade import NeuraTrade, NeuraDSPPlugin
+from NeuraTrade import NeuraTrade, NeuraDSPPlugin
 
 app = Flask(__name__)
 
