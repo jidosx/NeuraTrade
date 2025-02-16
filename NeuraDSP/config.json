@@ -1,0 +1,4 @@
+{
+    "model_path": "path/to/model",
+    "deepseek_api_key": "your_api_key"
+}
