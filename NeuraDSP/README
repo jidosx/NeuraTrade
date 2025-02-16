@@ -1,6 +1,6 @@
 # NeuraDSP Plugin
 
-A plugin for the iNeuraTrade framework that integrates DeepSeek technology for enhanced market analysis and predictive capabilities.
+A plugin for the NeuraTrade framework that integrates DeepSeek technology for enhanced market analysis and predictive capabilities.
 
 ## Features
 
@@ -14,4 +14,4 @@ A plugin for the iNeuraTrade framework that integrates DeepSeek technology for e
 * TensorFlow 2.4+
 * Keras 2.4+
 * scikit-learn 0.24+
-* iNeuraTrade framework
+* NeuraTrade framework
