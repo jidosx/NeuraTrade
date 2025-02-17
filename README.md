@@ -104,10 +104,11 @@ The FOMO Fear Index System Price Predictor is seamlessly integrated with the Neu
 *   **Comprehensive Market Insights**: Providing a holistic view of market trends, sentiment, and potential risks.
 
 
-**Example Usage**
-
 Status
 🚧 In Development
+
+
+**Example Usage**
 ----------------
 
 ```python
