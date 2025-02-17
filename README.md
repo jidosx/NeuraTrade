@@ -10,19 +10,19 @@ ____________
 Unlock the full potential of your trading applications with NeuraTrade, a composable, plugin-based AI agent framework. Our platform abstracts the trading process into three streamlined steps: data ingestion, decision-making (enhanced with NeuraDSP), and action execution. With a modular, plugin-based system, developers can effortlessly define triggers and actions as standalone plugins.
 
 Architecture
-__
+-------------
     Data Ingestion: Collects and processes market data, laying the foundation for informed decision-making.
     Decision-Making with NeuraDSP: Employs advanced deep learning models (via NeuraDSP) to analyze market data and determine the best course of action.
     Action Execution: Executes the selected action, such as buying or selling a stock, with precision and speed.
 
 Plugin System
-__
+-------------
     Define Triggers: Specify when the AI agent should act, ensuring timely and relevant interventions.
     Define Actions: Specify what actions the AI agent should take, allowing for customized trading strategies.
     Integrate with External Systems: Seamlessly integrate with external systems, such as databases or APIs, to enhance platform capabilities.
 
 NeuraDSP Integration
-__
+-------------
     NeuraDSP Plugin: Provides deep, insightful market analysis using proprietary DeepSeek technology.
     Functionality:
         Advanced Market Pattern Recognition: Identifies complex patterns in real-time market data.
@@ -30,7 +30,7 @@ __
         Risk Assessment: Evaluates potential risks associated with predicted trends.
 
 Key Plugins and Features
-__
+-------------
 1. NeuraDSP Plugin
 
     Code Snippet:
