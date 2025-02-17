@@ -32,8 +32,8 @@ NeuraDSP Integration
 Key Plugins and Features
 -------------
 ### 1. **NeuraDSP Plugin**
--------------
-    class NeuraDSPPlugin(BasePlugin):
+
+class NeuraDSPPlugin(BasePlugin):
     def __init__(self, model_path: str, deepseek_api_key: str):
         self.model_path = model_path
         self.deepseek_api_key = deepseek_api_key
@@ -55,6 +55,7 @@ Key Plugins and Features
 
     def can_handle(self, context: TradingContext) -> bool:
         return 'market_data' in context.data and 'neura_dsp_analysis' not in context.data
+
 
 
 
