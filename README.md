@@ -103,7 +103,11 @@ The FOMO Fear Index System Price Predictor is seamlessly integrated with the Neu
 *   **Enhanced Predictive Analytics**: Combining the strengths of NeuraDSP's DeepSeek technology with the FOMO Fear Index System's sentiment analysis.
 *   **Comprehensive Market Insights**: Providing a holistic view of market trends, sentiment, and potential risks.
 
+
 **Example Usage**
+
+Status
+🚧 In Development
 ----------------
 
 ```python
@@ -144,7 +148,3 @@ Advantages
     Modular and Extensible: Allows for easy addition of new plugins and functionality.
     Real-time Insights: Provided through the Trading UI, enabling informed decision-making.
     Scalable: Designed to handle increased trading volumes and market data.
-
-Status
-
-🚧 In Development
