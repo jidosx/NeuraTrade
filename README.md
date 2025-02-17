@@ -6,7 +6,6 @@ ____________
 ____________
 
 **NeuraTrade Trading Platform with NeuraDSP Integration**
-Overview
 
 Unlock the full potential of your trading applications with NeuraTrade, a composable, plugin-based AI agent framework. Our platform abstracts the trading process into three streamlined steps: data ingestion, decision-making (enhanced with NeuraDSP), and action execution. With a modular, plugin-based system, developers can effortlessly define triggers and actions as standalone plugins.
 Architecture
