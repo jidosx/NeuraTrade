@@ -105,6 +105,7 @@ The FOMO Fear Index System Price Predictor is seamlessly integrated with the Neu
 
 
 Status
+
 🚧 In Development
 
 
