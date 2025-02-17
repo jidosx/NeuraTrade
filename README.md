@@ -31,8 +31,8 @@ NeuraDSP Integration
 
 Key Plugins and Features
 -------------
-1. NeuraDSP Plugin
-
+### 1. **NeuraDSP Plugin**
+-------------
     Code Snippet:
 
     python
@@ -66,7 +66,7 @@ code
 
 
 ### 2. **Market Data Plugin**
-
+-------------
 *   **Description**: Collects and processes market data from specified markets.
 *   **Key Features**:
     *   Supports multiple market data sources
@@ -74,7 +74,7 @@ code
     *   Customizable market selection
 
 ### 3. **Trading UI Enhancements for NeuraDSP Insights**
-
+-------------
 *   **Description**: Provides real-time market trend visualizations, risk assessment dashboard, and DeepSeek analysis logs.
 *   **Key Features**:
     *   Interactive charts for market trend analysis
@@ -82,7 +82,7 @@ code
     *   Detailed logs for auditing and refining NeuraDSP models
 
 ### 4. **FOMO Fear Index System Price Predictor**
-
+-------------
 *   **Description**: Utilizes a combination of natural language processing (NLP) and machine learning algorithms to analyze market sentiment and predict price movements based on fear, uncertainty, and doubt (FUD) factors.
 *   **Key Features**:
     *   Analyzes social media and news articles to gauge market sentiment
