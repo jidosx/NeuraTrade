@@ -1,0 +1,10 @@
+# fomo_fear_index/sentiment_analysis.py
+import nltk
+from nltk.sentiment import SentimentIntensityAnalyzer
+
+class SentimentAnalysis:
+    def __init__(self):
+        self.sia = SentimentIntensityAnalyzer()
+
+    def analyze(self, text):
+        return self.sia.polarity_scores(text)
