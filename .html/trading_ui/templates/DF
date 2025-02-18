@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NeuraTrade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>NeuraTrade</h1>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Brokers and Exchanges</h2>
+            <ul>
+                <li><a href="#">Binance</a></li>
+                <li><a href="#">Kraken</a></li>
+                <li><a href="#">Coinbase</a></li>
+                <li><a href="#">FTX</a></li>
+            </ul>
+        </div>
+        <div class="right-panel">
+            <h2>NeuraDSP Insights</h2>
+            <p id="insights"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
