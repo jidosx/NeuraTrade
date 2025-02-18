@@ -1,0 +1,19 @@
+<!-- trading_ui/templates/trading_dashboard.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Trading Dashboard</h1>
+    <div class="neuradsp-insights">
+        <h2>NeuraDSP Insights</h2>
+        <p>Predicted Price: {{ predicted_price }}</p>
+        <p>Sentiment Analysis: {{ sentiment_analysis }}</p>
+    </div>
+    <div class="trading-actions">
+        <form action="/place_order" method="post">
+            <input type="text" name="symbol" placeholder="Symbol">
+            <input type="number" name="amount" placeholder="Amount">
+            <input type="number" name="price" placeholder="Price">
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+{% endblock %}
