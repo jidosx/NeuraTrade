@@ -1,0 +1,27 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-panel {
+    width: 30%;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.right-panel {
+    width: 70%;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#insights {
+    font-size: 18px;
+    font-weight: bold;
+}
