@@ -1,0 +1,188 @@
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense, Dropout
+import ta
+
+class TechnicalAnalysisPredictor:
+    """
+    A class for technical analysis and price prediction using LSTM
+    to complement the NeuraTrade platform.
+    """
+    
+    def __init__(self, lookback_period=60, prediction_horizon=30):
+        """
+        Initialize the predictor with specific parameters.
+        
+        Args:
+            lookback_period (int): Number of past days to consider
+            prediction_horizon (int): Number of days to predict
+        """
+        self.lookback_period = lookback_period
+        self.prediction_horizon = prediction_horizon
+        self.scaler = MinMaxScaler()
+        self.model = None
+        
+    def prepare_technical_indicators(self, df):
+        """
+        Calculate technical indicators for the dataset.
+        
+        Args:
+            df (pd.DataFrame): DataFrame with OHLCV data
+        
+        Returns:
+            pd.DataFrame: DataFrame with technical indicators
+        """
+        # Add RSI
+        df['RSI'] = ta.momentum.RSIIndicator(df['close']).rsi()
+        
+        # Add MACD
+        macd = ta.trend.MACD(df['close'])
+        df['MACD'] = macd.macd()
+        df['MACD_signal'] = macd.macd_signal()
+        
+        # Add Bollinger Bands
+        bollinger = ta.volatility.BollingerBands(df['close'])
+        df['BB_high'] = bollinger.bollinger_hband()
+        df['BB_low'] = bollinger.bollinger_lband()
+        
+        # Add Moving Averages
+        df['SMA_20'] = ta.trend.SMAIndicator(df['close'], window=20).sma_indicator()
+        df['EMA_20'] = ta.trend.EMAIndicator(df['close'], window=20).ema_indicator()
+        
+        return df
+    
+    def create_sequences(self, data):
+        """
+        Create sequences for LSTM training.
+        
+        Args:
+            data (np.array): Input data
+            
+        Returns:
+            tuple: (X, y) sequences for training
+        """
+        X, y = [], []
+        for i in range(len(data) - self.lookback_period - self.prediction_horizon):
+            X.append(data[i:(i + self.lookback_period)])
+            y.append(data[i + self.lookback_period:i + self.lookback_period + self.prediction_horizon, 0])
+        return np.array(X), np.array(y)
+    
+    def build_model(self, input_shape):
+        """
+        Build LSTM model architecture.
+        
+        Args:
+            input_shape (tuple): Shape of input data
+        """
+        self.model = Sequential([
+            LSTM(units=50, return_sequences=True, input_shape=input_shape),
+            Dropout(0.2),
+            LSTM(units=50, return_sequences=False),
+            Dropout(0.2),
+            Dense(self.prediction_horizon)
+        ])
+        
+        self.model.compile(optimizer='adam', loss='mse')
+        
+    def train(self, df, epochs=50, batch_size=32):
+        """
+        Train the model on historical data.
+        
+        Args:
+            df (pd.DataFrame): Historical price data
+            epochs (int): Number of training epochs
+            batch_size (int): Batch size for training
+            
+        Returns:
+            history: Training history
+        """
+        # Prepare data
+        df = self.prepare_technical_indicators(df)
+        df = df.dropna()
+        
+        # Select features
+        features = ['close', 'RSI', 'MACD', 'BB_high', 'BB_low', 'SMA_20', 'EMA_20']
+        data = df[features].values
+        
+        # Scale data
+        scaled_data = self.scaler.fit_transform(data)
+        
+        # Create sequences
+        X, y = self.create_sequences(scaled_data)
+        
+        # Build and train model
+        self.build_model(input_shape=(X.shape[1], X.shape[2]))
+        history = self.model.fit(
+            X, y,
+            epochs=epochs,
+            batch_size=batch_size,
+            validation_split=0.2,
+            verbose=1
+        )
+        
+        return history
+    
+    def predict(self, df):
+        """
+        Make predictions using the trained model.
+        
+        Args:
+            df (pd.DataFrame): Recent market data
+            
+        Returns:
+            np.array: Predicted prices
+        """
+        # Prepare data
+        df = self.prepare_technical_indicators(df)
+        df = df.dropna()
+        
+        # Select features
+        features = ['close', 'RSI', 'MACD', 'BB_high', 'BB_low', 'SMA_20', 'EMA_20']
+        data = df[features].values
+        
+        # Scale data
+        scaled_data = self.scaler.transform(data)
+        
+        # Create sequence for prediction
+        X = scaled_data[-self.lookback_period:].reshape(1, self.lookback_period, len(features))
+        
+        # Make prediction
+        scaled_prediction = self.model.predict(X)
+        
+        # Inverse transform the prediction
+        prediction = self.scaler.inverse_transform(
+            np.concatenate([scaled_prediction, np.zeros((scaled_prediction.shape[0], len(features)-1))], axis=1)
+        )[:, 0]
+        
+        return prediction
+
+# Example usage
+def demo_predictor():
+    """
+    Demonstrate the usage of TechnicalAnalysisPredictor
+    """
+    import yfinance as yf
+    
+    # Download sample data
+    symbol = "BTC-USD"
+    df = yf.download(symbol, start="2020-01-01", end="2023-12-31")
+    
+    # Initialize predictor
+    predictor = TechnicalAnalysisPredictor(lookback_period=60, prediction_horizon=30)
+    
+    # Train the model
+    history = predictor.train(df)
+    
+    # Make prediction
+    recent_data = df.tail(100)
+    prediction = predictor.predict(recent_data)
+    
+    print(f"Predicted prices for next {predictor.prediction_horizon} days:")
+    print(prediction)
+    
+    return predictor, prediction
+
+if __name__ == "__main__":
+    predictor, prediction = demo_predictor()
