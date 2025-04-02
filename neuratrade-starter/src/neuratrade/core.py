@@ -29,3 +29,4 @@ class NeuraTradeCore:
     def predict(self, input_data):
         # Make predictions using the trained model
         return self.model.predict(input_data)
+
