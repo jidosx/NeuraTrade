@@ -12,3 +12,4 @@ class LSTM_Predictor:
 
     def predict(self, data):
         return self.model.predict(data)
+
