@@ -46,3 +46,5 @@ class Agent:
     else:
       # Hold
       print(f'Holding {self.symbol} at {self.data["close"][-1]}')
+
+
